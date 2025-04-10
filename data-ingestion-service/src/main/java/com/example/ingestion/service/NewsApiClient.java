@@ -37,6 +37,8 @@ public class NewsApiClient {
                         .path("/top-headlines")
                         .queryParam("category", actualCategory)
                         .queryParam("language", "en")
+                        // Add this line:
+                        .queryParam("country", "us")  // The News API requires a country parameter
                         .queryParam("apiKey", apiKey)
                         .build())
                 .retrieve()
